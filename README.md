@@ -55,7 +55,9 @@ NeighbourhoodMap-master.zip/
 #### FourSquare-API
 - Foursquare is a technology company that uses location intelligence to build meaningful consumer experiences and business solutions.
 - Foursquare offers hosted technology and data to build context-smart, location-aware apps. Places by Foursquare technology powers location data for Apple, Uber, Twitter, Microsoft, Samsung and 100,000 other developers.
+- use clientId ,secretId to get location information by pasing latitude and longitude.you can see in **maps.js**.
 - for more information [online](https://foursquare.com/).
+
 #### Google-API
 - Google providing different types of facilites.API's one.
 - These API used for Developing Perposes.
