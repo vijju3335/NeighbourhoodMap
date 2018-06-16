@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Map</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header" id="main">
+                <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;z-index: 5" id="mySidebar">
+                    <button class="w3-bar-item w3-button w3-large cls" style="font-size: 50px;"><b>Places Must Visit</b><span onclick="w3_close()">&times;</span></button>
+                    <form class="navbar-form navbar-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="search" data-bind="textInput: searchLoc, valueUpdate: 'afterkeydown'" placeholder="Search Place">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                        <aside class="col-md-3  collapsed in" id="navbarSupportedContent">
+
+                            <div class="sidenav">
+                                <div class="list-group" data-bind="foreach: locationList">
+
+                                    <a href="#" class="list-group-item list-group-item-action" data-bind="text: title, click: showLocation"></a>
+                                </div>
+                            </div>
+                        </aside>
+                    </form>
+                </div>
+                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            </div>
+            <div class="navbar-brand navbar-right">
+                <span class="nav-title">Places Must Visit</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div id="map"></div>
+        </div>
+    </main>
+    <!-- Knockout.js -->
+    <script src="http://knockoutjs.com/downloads/knockout-3.4.2.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/header.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyAxvlUJa8lIo1GIldft5bAwrxFXLJZq70M&callback=initMap" onerror="GoogleApiError()"></script>
+</body>
+
+</html>
