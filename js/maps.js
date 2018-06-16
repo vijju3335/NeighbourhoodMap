@@ -191,7 +191,7 @@ function setallAnimationNull() {
 }
 // add animation to marker
 function toggleBounce(marker) {
-    if (marker.getAnimation() !== null) {
+    if (marker.getAnimation() != null) {
         marker.setAnimation(null);
     } else {
         //setallAnimationNull();
